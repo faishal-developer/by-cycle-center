@@ -12,7 +12,8 @@ app.use(express.json())
 app.use(fileUpload())
 
 console.log(process.env.DB_PASS, process.env.DB_USER);
-const uri = `mongodb+srv://ass12:iwl4SabFlkpnMve0@cluster0.yaqej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+//you should new password and user when you will use
+const uri = `mongodb+srv://process.env.DB_USER:process.env.DB_PASS.yaqej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function run() {
